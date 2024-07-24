@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+int main()
+{ 
+    int a[10],key,i,n,temp;
+    cout<<"Enter the array size : ";
+    cin>>n;
+    cout<<"\n";
+    for(i=0;i<n;i++)
+    {
+        cout<<"Enter the "<<i<<"th array element : ";
+        cin>>a[i];
+    }
+    for(i=0;i<n-1;i++)
+    {
+        for(int j=0;j<n-i-1;j++)
+        {
+            if(a[j]>a[j+1])
+            {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+                
+                
+            }
+            
+        }
+    }
+    cout<<"Your Sorted array is \n";
+    for(i=0;i<n;i++)
+    {
+        cout<<"\t"<<i;
+    }
+    cout<<"\n";
+    for(i=0;i<n;i++)
+    {
+        cout<<"\t"<<a[i];
+    }
+    cout<<"Enter which element you search :";
+    cin>>key;
+    for(i=0;i<n;i++)
+    {
+        if(key==a[i])
+        {
+            cout<<"Element "<<key<<"Are found at index "<<i;
+            break;
+            
+        }
+        
+        
+        
+    }
+    if(i==n)
+    {
+        cout<<"Element are not found ";
+    }
+    
+    
+    
+    
+ return 0;    
+}
